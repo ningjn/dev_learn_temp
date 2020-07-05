@@ -1,0 +1,33 @@
+::ng-deep .dx-datagrid .dx-row > td {
+  padding: 12px 7px;
+}
+
+::ng-deep .dx-datagrid-rowsview .dx-row {
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
+}
+
+::ng-deep .dx-datagrid-headers {
+  color: rgba(255, 255, 255, 0.6);
+  -ms-touch-action: pinch-zoom;
+  touch-action: pinch-zoom;
+  border-bottom: 0 solid white;
+}
+
+::ng-deep .dx-datagrid-headers .dx-datagrid-table .dx-row > td {
+  border-bottom: 0 solid white;
+  //padding-top: 0px;
+  //padding-bottom: 0px;
+  line-height: 16px;
+  font-weight: 500;
+  //font-size: 12px;
+}
+
+::ng-deep .dx-datagrid-total-footer {
+  border-top: 0 solid #596980;
+}
+
+::ng-deep .dx-datagrid-total-footer > .dx-datagrid-content {
+  padding-top: 0;
+  padding-bottom: 0;
+}

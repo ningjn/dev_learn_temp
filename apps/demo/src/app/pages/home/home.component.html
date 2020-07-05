@@ -1,0 +1,36 @@
+<div style="padding: 20px;">
+  <dx-data-grid
+    [dataSource]="dataSource"
+    [showColumnLines]="false"
+    [showBorders]="false"
+    [showRowLines]="false"
+    [rowAlternationEnabled]="false"
+    (onRowPrepared)="onRowPrepared($event)"
+  >
+    <!--<dxo-selection mode="single"></dxo-selection>-->
+    <dxo-scrolling mode="infinite"></dxo-scrolling>
+
+    <dxi-column
+      *ngFor="let item of columns"
+      [dataField]="item.dataField"
+      [caption]="item.caption"
+      cellTemplate="cellTemplate"
+      headerCellTemplate="headerCellTemplate"
+      [sortingMethod]="sorting"
+    ></dxi-column>
+
+    <dxo-summary>
+      <dxi-total-item column="indexName" summaryType="count"> </dxi-total-item>
+      <dxi-total-item column="value_01" summaryType="count"> </dxi-total-item>
+      <dxi-total-item column="value_03" summaryType="count"> </dxi-total-item>
+    </dxo-summary>
+
+    <div *dxTemplate="let data of 'cellTemplate'">
+      {{ data.value.value }}--{{ data.value.index }}
+    </div>
+
+    <div *dxTemplate="let data of 'headerCellTemplate'">
+      {{ data.column.caption | gridCellData }}
+    </div>
+  </dx-data-grid>
+</div>

@@ -22,7 +22,13 @@
             "tsConfig": "apps/demo/tsconfig.app.json",
             "aot": true,
             "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
-            "styles": ["apps/demo/src/styles.scss"],
+            "styles": [
+              "node_modules/devextreme/dist/css/dx.common.css",
+              "apps/demo/src/themes/generated/theme.base.css",
+              "apps/demo/src/themes/generated/theme.additional.css",
+              "apps/demo/src/dx-styles.scss",
+              "apps/demo/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
